@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Http\Controllers\admin;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class profilecontroller extends Controller
+{
+    //action
+    public function add()
+    {
+        return view('admin.profile.create');
+    }
+    public function create()
+    {
+        return redirect('admin.profile.create');
+    }
+    public function edit()
+    {
+        return view('admin.profile.create');
+    }
+    public function update()
+    {
+        return redirect('admin.profile.create');
+    }
+}
