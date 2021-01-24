@@ -32,4 +32,4 @@ class CreateNewsTable extends Migration
     {
         Schema::dropIfExists('news');
     }
-}
+};

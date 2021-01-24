@@ -13,7 +13,7 @@ class CreateNewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('news', function (Blueprint $table) {
+        Schema::create('profile', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');//名前を保存
             $table->string('gender');//性別を保存
@@ -30,6 +30,6 @@ class CreateNewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news');
+        Schema::dropIfExists('profile');
     }
 }
