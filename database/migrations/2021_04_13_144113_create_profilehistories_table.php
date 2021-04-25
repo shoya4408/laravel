@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNewsTable extends Migration
+class CreateProfilehistoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateNewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('profile', function (Blueprint $table) {
+        Schema::create('profilehistories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');//名前を保存
-            $table->string('gender');//性別を保存
-            $table->string('hobby');//趣味を保存
-            $table->string('introduction');//自己紹介を保存
+            $table->integer('profile_id');
+            $table->string('edited_at');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateNewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profile');
+        Schema::dropIfExists('profilehistories');
     }
 }
